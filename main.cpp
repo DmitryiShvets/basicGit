@@ -9,7 +9,17 @@ int DaysInYear(int year) {
     else return 365;
 }
 
-int main() {
+int DaysInYearRange(int a, int b) {
+    auto res = 0;
+    for (; a < b; a++) {
+        if (a % 4 == 0 && !(a % 100 == 0 && a % 400 != 0))res += 366;
+        else res += 365;
+    }
+    return 0;
+}
 
+int DaysInYearRange(int a, int b);
+
+int main() {
     return 0;
 };
